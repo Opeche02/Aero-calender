@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/widget_bg_shape">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/widget_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Upcoming Agenda"
+            android:textColor="#191C1E"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Quick Add button -->
+        <LinearLayout
+            android:id="@+id/widget_quick_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/widget_action_btn"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Quick Add"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D1E4FF"
+        android:layout_marginBottom="8dp" />
+
+    <!-- No events fallback label -->
+    <TextView
+        android:id="@+id/widget_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No upcoming agenda items.\nTap + to schedule an event."
+        android:textColor="#5C5E61"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- Items Layout Container containing up to 3 events -->
+    <LinearLayout
+        android:id="@+id/widget_items_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top">
+
+        <!-- Item 1 -->
+        <LinearLayout
+            android:id="@+id/widget_item_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/widget_item_shape"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <View
+                android:id="@+id/widget_color_bar_1"
+                android:layout_width="4dp"
+                android:layout_height="24dp"
+                android:background="#3F51B5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:id="@+id/widget_text_title_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Event Title 1"
+                    android:textColor="#001D36"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/widget_text_desc_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 AM - Google Meet"
+                    android:textColor="#43474E"
+                    android:textSize="10sp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Item 2 -->
+        <LinearLayout
+            android:id="@+id/widget_item_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/widget_item_shape"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <View
+                android:id="@+id/widget_color_bar_2"
+                android:layout_width="4dp"
+                android:layout_height="24dp"
+                android:background="#9C27B0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:id="@+id/widget_text_title_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Event Title 2"
+                    android:textColor="#001D36"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/widget_text_desc_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="05:00 PM - Gold's Gym"
+                    android:textColor="#43474E"
+                    android:textSize="10sp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Item 3 -->
+        <LinearLayout
+            android:id="@+id/widget_item_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/widget_item_shape"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <View
+                android:id="@+id/widget_color_bar_3"
+                android:layout_width="4dp"
+                android:layout_height="24dp"
+                android:background="#F44336" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:id="@+id/widget_text_title_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Event Title 3"
+                    android:textColor="#001D36"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/widget_text_desc_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="07:30 PM - Olive Garden"
+                    android:textColor="#43474E"
+                    android:textSize="10sp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

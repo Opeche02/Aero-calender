@@ -1,0 +1,6 @@
+{
+  "name": "Aero Calendar",
+  "description": "A modern Material You calendar application featuring Samsung-grade scheduling, tactile spring physics, and multi-source cloud sync simulations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
